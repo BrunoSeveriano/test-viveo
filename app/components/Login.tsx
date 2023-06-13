@@ -4,7 +4,6 @@ import Card from "@mui/material/Card";
 import { Button, CardContent } from "@mui/material";
 import Image from "next/image";
 import Input from "./inputs/Input";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Link from "next/link";
 
 const Login = () => {
@@ -25,14 +24,16 @@ const Login = () => {
 
           <div className="w-96">
             <Input name="email" label="Email" />
-            <Input name="password" label="Password" />
-            <Button
-              fullWidth
-              sx={{ "&.MuiButton-root": { backgroundColor: "#0b4c51" } }}
-              variant="contained"
-            >
-              Login
-            </Button>
+            <Input type="password" name="password" label="Password" />
+            <Link href="/dashboard">
+              <Button
+                fullWidth
+                sx={{ "&.MuiButton-root": { backgroundColor: "#0b4c51" } }}
+                variant="contained"
+              >
+                Login
+              </Button>
+            </Link>
           </div>
 
           <div className="mt-4 text-center">
